@@ -1,0 +1,7 @@
+services:
+  app:
+    build:
+      context: .
+      target: serve
+    ports:
+      - "8080:80"
