@@ -27,3 +27,6 @@ Thumbs.db
 
 # Playwright BDD (generated)
 .features-gen/
+
+# Playwright MCP
+.playwright-mcp
