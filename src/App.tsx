@@ -1,3 +1,9 @@
+import styles from "./App.module.css";
+
 export default function App() {
-  return <h1>Frontend Template</h1>;
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.title}>Frontend Template</h1>
+    </div>
+  );
 }
