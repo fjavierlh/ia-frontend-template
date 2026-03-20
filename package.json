@@ -2,7 +2,6 @@
   "name": "frontend-template",
   "version": "1.0.0",
   "description": "A modern frontend template",
-  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "dev:docker": "vite --host",
@@ -25,6 +24,7 @@
     "format:check": "prettier --check .",
     "validate": "npm run compile && npm run lint && npm run test",
     "validate:full": "npm run compile && npm run lint && npm run test:all",
+    "knip": "knip",
     "mcp:playwright": "node ./node_modules/@playwright/mcp/cli.js",
     "prepare": "husky"
   },
@@ -50,6 +50,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@eslint/js": "9.39.4",
     "@playwright/mcp": "0.0.64",
     "@playwright/test": "1.58.2",
     "@testing-library/jest-dom": "6.9.1",
@@ -68,8 +69,11 @@
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.0.1",
+    "eslint-plugin-security": "4.0.0",
+    "globals": "14.0.0",
     "husky": "9.1.7",
     "jsdom": "29.0.0",
+    "knip": "6.0.1",
     "lint-staged": "16.4.0",
     "playwright-bdd": "8.5.0",
     "prettier": "3.8.1",
