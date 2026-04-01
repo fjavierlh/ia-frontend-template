@@ -1,8 +1,12 @@
 {
   "mcpServers": {
     "playwright": {
-      "command": "node",
+      "command": "bash",
       "args": ["-c", "source ~/.nvm/nvm.sh && nvm use && npm run mcp:playwright"]
+    },
+    "context7": {
+      "command": "bash",
+      "args": ["-c", "source ~/.nvm/nvm.sh && nvm use && npm run mcp:context7"]
     }
   }
 }
