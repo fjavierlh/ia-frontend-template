@@ -40,7 +40,7 @@ chore: add @upstash/context7-mcp as devDependency
 
 ## Rules
 
-- **One commit per green+refactor TDD cycle.** Do not accumulate changes across multiple cycles
+- **One commit per green+refactor TDD cycle** (see `xp-tdd-practices`). Do not accumulate changes across multiple cycles
 - **Never commit with failing tests** or non-compiling code
 - **Never commit commented-out code**
 - **Never commit as Claude or with Claude as co-author.** Do not add `Co-authored-by: Claude` or any AI attribution in commit messages. Commits belong to the Tech Lead.

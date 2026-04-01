@@ -58,7 +58,7 @@ Feature: User login
 
 ## Relationship with acceptance criteria
 
-CEO writes acceptance criteria in Given/When/Then format. Planner transforms them directly into Gherkin scenarios. The format should be compatible:
+CEO writes acceptance criteria in Given/When/Then format (see `user-story-format`). Planner transforms them directly into Gherkin scenarios. The format should be compatible:
 
 **CEO acceptance criterion:**
 ```

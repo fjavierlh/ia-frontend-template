@@ -40,7 +40,7 @@ Reference existing .feature files if there is related functionality.]
 
 ## Rules
 
-- **Be specific in acceptance criteria.** They must be verifiable without ambiguity. Use Given/When/Then — the Planner will transform them directly into Gherkin scenarios.
+- **Be specific in acceptance criteria.** They must be verifiable without ambiguity. Use Given/When/Then — the Planner will transform them directly into Gherkin scenarios (see `gherkin-writing`).
 - **One story, one objective.** If a story has more than 5 acceptance criteria, it should probably be split.
 - **Prioritize with data.** If Sentry shows an error affecting many users, that outweighs a new feature.
 - **Use labels in Linear** to categorize: `feature`, `bug`, `improvement`, `tech-debt`.

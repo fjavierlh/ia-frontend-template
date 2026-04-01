@@ -19,7 +19,7 @@ user-invocable: false
 ### 0. REASON (before any code)
 
 1. Read the full task in Linear (description, criteria, dependencies)
-2. Read the related Gherkin scenarios in `features/`
+2. Read the related Gherkin scenarios in `features/` (see `gherkin-writing`)
 3. Read existing code you will modify or extend
 4. Use Context7 to check current API docs for libraries you will use
 5. Verify task dependencies are completed
@@ -74,7 +74,7 @@ git add -A
 git commit -m "type(scope): description"
 ```
 
-**Always commit after green+refactor.** Never commit with failing tests.
+**Always commit after green+refactor.** Never commit with failing tests. (see `conventional-commits`)
 
 ### 5. RE-EVALUATE
 
@@ -87,7 +87,7 @@ Before continuing:
 
 ## Inside-out development
 
-Always develop from the inside out:
+Always develop from the inside out (see `hexagonal-patterns`):
 
 ```
 Domain (pure logic) → Use Case → InMemory Repository → Adapter/Controller
