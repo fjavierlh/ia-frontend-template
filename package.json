@@ -11,47 +11,45 @@
     "compile": "tsc -b --noEmit",
     "compile:watch": "tsc -b --noEmit --watch",
     "test": "vitest run",
+    "test:unit": "vitest run src",
+    "test:int": "vitest run --reporter=verbose",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "test:ci": "vitest run --reporter=verbose",
     "test:e2e": "bddgen && playwright test",
     "test:e2e:ui": "bddgen && playwright test --ui",
-    "test:all": "npm run test && npm run test:e2e",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "validate": "npm run compile && npm run lint && npm run test",
-    "validate:full": "npm run compile && npm run lint && npm run test:all",
+    "test:all": "bun run test && bun run test:e2e",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --fix .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "check": "biome check .",
+    "check:fix": "biome check --fix .",
+    "validate": "bun run compile && bun run check && bun run test",
+    "validate:full": "bun run compile && bun run check && bun run test:all",
     "knip": "knip",
     "mcp:playwright": "node ./node_modules/@playwright/mcp/cli.js",
     "mcp:context7": "node ./node_modules/@upstash/context7-mcp/dist/index.js",
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.{css,json,md,html}": [
-      "prettier --write"
-    ]
+    "*.{ts,tsx,js,jsx,json,css,md,html}": ["biome check --fix --no-errors-on-unmatched"]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "engines": {
-    "node": ">=24.14.0",
-    "npm": ">=11.0.0"
+    "bun": ">=1.0.0",
+    "node": ">=24.14.0"
   },
   "dependencies": {
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@eslint/js": "9.39.4",
+    "@biomejs/biome": "2.4.10",
     "@playwright/mcp": "0.0.64",
     "@playwright/test": "1.58.2",
     "@testing-library/jest-dom": "6.9.1",
@@ -60,26 +58,16 @@
     "@types/node": "25.5.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "@typescript-eslint/eslint-plugin": "8.57.1",
-    "@typescript-eslint/parser": "8.57.1",
     "@upstash/context7-mcp": "^2.1.6",
     "@vitejs/plugin-react": "6.0.1",
     "@vitest/coverage-v8": "4.1.0",
     "@vitest/ui": "4.1.0",
-    "eslint": "9.39.4",
-    "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "7.0.1",
-    "eslint-plugin-security": "4.0.0",
-    "globals": "14.0.0",
     "husky": "9.1.7",
     "jsdom": "29.0.0",
     "knip": "6.0.1",
     "lint-staged": "16.4.0",
     "playwright-bdd": "8.5.0",
-    "prettier": "3.8.1",
-    "typescript": "5.9.3",
+    "typescript": "^6.0.2",
     "vite": "8.0.1",
     "vitest": "4.1.0"
   }
