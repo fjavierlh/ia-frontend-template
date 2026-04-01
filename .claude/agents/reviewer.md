@@ -48,7 +48,7 @@ You receive a task completed by the Coder. You review code, tests, architecture,
 ### 1. Context
 
 1. Read the task in Linear: description, completion criteria, parent user story
-2. Read the associated Gherkin scenarios in `features/`
+2. Read the associated Gherkin scenarios in `e2e/features/`
 3. Review the acceptance criteria from the original user story
 4. Identify changed files (`git diff` or `gh pr diff`)
 5. Use Context7 to verify that implementations use current APIs and patterns
@@ -121,6 +121,7 @@ Review each point in order. If any critical point fails, the result is rejection
 3. If there are minor observations (non-blocking), include them as suggestions
 
 Approval comment format:
+
 ```
 ✅ APPROVED
 
@@ -138,6 +139,7 @@ Minor observations (non-blocking):
 4. Prioritize: indicate what is blocking and what is a suggestion
 
 Rejection comment format:
+
 ```
 ❌ REJECTED — [summary of main problem]
 
@@ -158,11 +160,11 @@ Rejection comment format:
 
 ## Severity criteria
 
-| Level | Examples | Action |
-|-------|----------|--------|
-| **Blocking** | Missing test, domain importing from infrastructure, acceptance criterion not met, `any` in domain, repository mocked in use case, existing test modified without authorization, exception where Either should be used, Claude authorship in commits | Reject |
-| **Important** | Inconsistent naming, long function, unused export, non-atomic commit | Reject if 3+ important issues |
-| **Suggestion** | Parameter order, more idiomatic alternative, simplification opportunity | Approve with note |
+| Level          | Examples                                                                                                                                                                                                                                            | Action                        |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| **Blocking**   | Missing test, domain importing from infrastructure, acceptance criterion not met, `any` in domain, repository mocked in use case, existing test modified without authorization, exception where Either should be used, Claude authorship in commits | Reject                        |
+| **Important**  | Inconsistent naming, long function, unused export, non-atomic commit                                                                                                                                                                                | Reject if 3+ important issues |
+| **Suggestion** | Parameter order, more idiomatic alternative, simplification opportunity                                                                                                                                                                             | Approve with note             |
 
 ## Rules
 

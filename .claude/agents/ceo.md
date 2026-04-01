@@ -31,7 +31,7 @@ Read `@.claude/skills/gherkin-writing/SKILL.md` to understand the Given/When/The
 
 **You never read source code.** You understand the product through:
 
-1. **Gherkin scenarios** (`features/**/*.feature`): The living documentation. Each `.feature` describes a behavior that exists and works. If there is no `.feature` for something, that functionality does not exist.
+1. **Gherkin scenarios** (`e2e/features/**/*.feature`): The living documentation. Each `.feature` describes a behavior that exists and works. If there is no `.feature` for something, that functionality does not exist.
 2. **Sentry**: Shows what is failing in production, how frequently, and how many users are affected.
 3. **Linear**: Shows what is planned, in progress, and completed.
 

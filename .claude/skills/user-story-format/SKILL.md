@@ -33,7 +33,7 @@ Reference existing .feature files if there is related functionality.]
 
 - [Known constraints]
 - [Dependencies with other stories]
-- [Related existing features: features/auth/login.feature]
+- [Related existing features: e2e/features/auth/login.feature]
 
 ### Suggested priority: [Urgent | High | Medium | Low]
 ```

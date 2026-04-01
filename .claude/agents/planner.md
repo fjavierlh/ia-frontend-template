@@ -48,7 +48,7 @@ Before planning, understand the terrain:
 
 ### 2. Gherkin scenarios (FIRST ACTION)
 
-Before creating any task, write the `.feature` files in `features/[module]/`.
+Before creating any task, write the `.feature` files in `e2e/features/[module]/`.
 
 **Gherkin scenarios are the contract between the CEO, the Planner, the Coder, and the Reviewer.** When the Tech Lead approves the `.feature` files, the contract is sealed for all agents.
 
@@ -90,7 +90,7 @@ Create each task as a sub-issue of the parent story in Linear with this format:
 
 ### Related Gherkin scenarios
 
-- `features/auth/login.feature` — Scenarios: "Successful login", "Login fails with wrong password"
+- `e2e/features/auth/login.feature` — Scenarios: "Successful login", "Login fails with wrong password"
 
 ### Dependencies
 

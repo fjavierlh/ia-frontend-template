@@ -11,17 +11,18 @@ Gherkin scenarios are the **contract between all agents and the Tech Lead**. Whe
 ## File location
 
 ```
-features/[module]/[feature-name].feature
+e2e/features/[module]/[feature-name].feature
 ```
 
 Examples:
-- `features/auth/login.feature`
-- `features/health/query-health.feature`
+
+- `e2e/features/auth/login.feature`
+- `e2e/features/health/query-health.feature`
 
 ## Feature file structure
 
 ```gherkin
-# features/auth/login.feature
+# e2e/features/auth/login.feature
 Feature: User login
   As a registered user
   I want to log in with my credentials
@@ -61,6 +62,7 @@ Feature: User login
 CEO writes acceptance criteria in Given/When/Then format (see `user-story-format`). Planner transforms them directly into Gherkin scenarios. The format should be compatible:
 
 **CEO acceptance criterion:**
+
 ```
 Given a registered user
 When they log in with correct credentials
@@ -68,6 +70,7 @@ Then they receive an authentication token
 ```
 
 **Planner's Gherkin scenario** (adds concreteness):
+
 ```gherkin
 Scenario: Successful login
   Given a registered user with email "user@example.com" and password "SecureP4ss!"
