@@ -7,6 +7,14 @@
     "context7": {
       "command": "bash",
       "args": ["-c", "source ~/.nvm/nvm.sh && nvm use && npm run mcp:context7"]
+    },
+    "linear-server": {
+      "type": "http",
+      "url": "https://mcp.linear.app/mcp"
+    },
+    "sentry": {
+      "type": "http",
+      "url": "https://mcp.sentry.dev/mcp"
     }
   }
 }

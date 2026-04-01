@@ -99,6 +99,10 @@ bun test:e2e           # E2E only (Playwright + Gherkin)
 bun test:coverage      # With coverage
 ```
 
+## Git workflow
+
+See `@.claude/skills/git-branching/SKILL.md` for branch naming, PR rules, branch lifecycle, and the non-negotiable rule of never pushing broken commits on any branch.
+
 ## Conventional commits
 
 See `@.claude/skills/conventional-commits/SKILL.md` for format, types, scope rules, and commit discipline (including the no-Claude-authorship rule).
@@ -129,13 +133,9 @@ Each agent runs in its own **isolated worktree** with a clean context, ensuring 
 
 ### Required MCP servers
 
-Linear and Sentry use HTTP transport (configured per-project):
-```bash
-claude mcp add --transport http linear-server https://mcp.linear.app/mcp
-claude mcp add --transport http sentry https://mcp.sentry.dev/mcp
-```
-
-Playwright and Context7 are configured in `.mcp.json` (already set up).
+All four MCP servers are configured in `.mcp.json` (project scope, shared via git):
+- **Playwright** and **Context7**: local command-based (run via `npm run mcp:*`)
+- **Linear** and **Sentry**: remote HTTP transport (require OAuth authentication per user via `/mcp`)
 
 | MCP Server | CEO | Planner | Coder | Reviewer |
 |------------|-----|---------|-------|----------|
